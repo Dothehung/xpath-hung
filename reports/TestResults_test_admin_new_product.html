@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Execution Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Automated Test Report</h2>
+                <p><strong>Executed At: </strong>2025-02-20 14:32:11</p>
+                <p><strong>Elapsed Time: </strong>1 ms</p>
+                <p><strong>Result Summary: </strong>Total: 1, Passed: 0, Errors: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <table class='table table-bordered'>
+                    <thead>
+                        <tr>
+                            <th>Test Case</th>
+                            <th>Outcome</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td>test_admin_new_product.CreateNewProductTest</td>
+                            <td><span class="label label-danger">Failed</span></td>
+                            <td><button class="btn btn-info btn-xs" onclick="toggleDetails()">View Details</button></td>
+                        </tr>
+                        <tr id="errorDetails" style="display:none;">
+                            <td colspan="3">
+                                <p style="color:red;">Error: NoSuchDriverException - Unable to locate Chrome WebDriver.</p>
+                                <p>Ensure the driver is correctly set up. More info: <a href="https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location">here</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><strong>Final Count: </strong>1 Test | 0 Passed | 1 Failed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById("errorDetails");
+            details.style.display = details.style.display === "none" ? "table-row" : "none";
+        }
+    </script>
+</body>
+</html>

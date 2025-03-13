@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automated Test Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Automated Test Report</h2>
+                <p><strong>Start Time: </strong>2025-02-20 14:32:11</p>
+                <p><strong>Duration: </strong>1 ms</p>
+                <p><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>Test Case</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td>test_login.LoginTest</td>
+                            <td><span class="label label-danger">Error</span></td>
+                            <td><button class="btn btn-default btn-xs">View</button></td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+                                <p style="color:maroon;">NoSuchDriverException: Unable to obtain driver for Chrome.<br>
+                                    <a href="https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location" target="_blank">Troubleshooting Guide</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text($this.text() === 'View' ? 'Hide' : 'View');
+            });
+        });
+    </script>
+</body>
+</html>

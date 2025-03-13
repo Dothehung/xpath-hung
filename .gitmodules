@@ -1,0 +1,3 @@
+[submodule "xpath-hung"]
+	path = xpath-hung
+	url = https://github.com/Dothehung/xpath-hung.git
